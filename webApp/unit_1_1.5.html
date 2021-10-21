@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>1.5</title>
+</head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous"></head>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+ <style type="text/css">
+ 	.tal:hover{ 
+           color: red;
+ 	}
+ 	textarea ,iframe{
+ 		border:2px solid #ddd;
+ 		height: 500px;
+ 		width: 100%; 
+ 	}
+ 
+	*{
+ margin: 0px;
+ padding: 0px;
+}
+
+	h2.head{
+		background: grey;
+		padding-top: 10px;
+		padding-bottom: 10px;
+		text-align: center;
+		color: #fff;
+	}
+  p{
+    padding-left: 20px;
+  }
+</style>
+<body>
+
+<h2 class="head" ><marquee behavior="Alternate">Literals-- Array, Boolean, Floating poinnt , Interger, Object String</marquee></h2><br>
+  <h3 style="margin-left: 5px; "><b>1) Array: </b></h3><br>
+<div style="margin-top: 15px; margin-left: 40px; margin-right: 15px;">
+
+	<h4 style="margin-left: 7px;">Definition:</h4>
+  <p style="margin-left: 20px;"> An array is a special variable, which can hold more than one value at a time.
+  </p>
+<br>
+<h4 style="margin-left: 7px;">Syntax:</h4>
+  <textarea style="height: 140px;background: grey; border-left:black SOLID 10px;">
+   <script type="text/javascript" language="javascript">
+      
+      var array_name = [var_1, var_2, ...];  
+    
+   </script> 
+  </textarea>
+<br><br>
+
+<div style="background: black; color: white; padding: 40px; padding-top: 25px; padding-bottom: 0px;">
+<table width="100%" border="0" cellpadding="5">
+      <tr>
+        <td width="50%"  scope="col">&nbsp;</td>
+        <td width="50%" scope="col" align="left">
+      
+        </td>
+      </tr>
+      <h4>Array Declaration program:</h4>
+      <td>
+        <form>
+          <strong style="color: #fff; ">Code</strong>
+          <textarea name="sourceCode" id="sourceCodea" style="background-color:powderblue;">
+            <!DOCTYPE html>
+            <html>
+            <head>
+              <title>Hello</title>
+            </head>
+            <body >
+              <script type="text/javascript" language="javascript">
+              		//Declaratoin without array
+              		   	var color1 = "Red";
+						var color2 = "Blue";
+						var color3 = "Green";  
+
+					//Declaration using Array 
+
+						var fruits = ["Mango", "Orange", "Grapes"]; 
+
+						document.write("Declaration without array uses more space in memory for three different variables:");
+						document.write("<br>"+"<br>"+color1+"<br>"+color2+"<br>"+color3+"<br>"+"<br>");
+						document.write("Declaration using array uses less space in memory for only one variable:");
+						document.write("<br>"+"<br>"+fruits);
+
+
+                  		
+              </script>   
+            </body>
+            </html>
+          </textarea>
+        </form>
+      </td>
+      <td><strong style="color: #fff">Output</strong>
+        <iframe name="targetCode" id="targetCodea" style="background-color: powderblue"></iframe></td>
+   </table>
+<script type="text/javascript" language="javascript">
+   function runcode() {
+    var content = document.getElementById('sourceCodea').value;
+    var iframe = document.getElementById('targetCodea');
+    iframe = (iframe.contentWindow)?iframe.contentWindow:(iframe.contentDocument)?iframe.contentDocument.document:
+      iframe.contentDocument;
+
+     iframe.document.open();
+     iframe.document.write(content);
+     iframe.document.close();
+     return false;
+   }
+   runcode();
+</script>
+  <center><input onclick="runcode();" type="button" value="Run code" style="background-color: #fff; color: #000; border-radius: 20px;padding: 10px;margin-top: 10px;margin-bottom: 10px;" ></center>
+</div>
+</div>
+<br><br>
+
+
+
+
+
+
+
+<h3 style="margin-left: 5px; "><b>2) Boolean: </b></h3><br>
+<div style="margin-top: 15px; margin-left: 40px; margin-right: 15px;">
+
+	<h4 style="margin-left: 7px;">Definition:</h4>
+  <p style="margin-left: 20px;"> Boolean is a data type in Javascript. It can only take the values true or false.<br>
+  	in programming, you will need a data type that can only have one of two values, like <br>
+	YES / NO<br>
+    ON / OFF<br>
+    TRUE / FALSE<br>
+
+ </p>
+
+
+<div style="background: black; color: white; padding: 40px; padding-top: 25px; padding-bottom: 0px; height: 500px;">
+<table width="100%" border="0" cellpadding="5">
+      <tr>
+        <td width="50%"  scope="col">&nbsp;</td>
+        <td width="50%" scope="col" align="left">
+      
+        </td>
+      </tr>
+      <h4>Boolean Declaration program:</h4>
+      <td>
+        <form>
+          <strong style="color: #fff; ">Code</strong>
+          <textarea name="sourceCode" id="sourceCodeb" style="background-color:powderblue; height: 320px;" >
+<!DOCTYPE html>
+<html>
+<body>
+  <h1>JavaScript Boolean</h1>
+  <script>
+    var YES = true;
+    var NO = false;
+
+    document.write(YES+"<br>");
+    document.write(NO);
+    </script>
+</body>
+</html>
+       </textarea>
+        </form>
+      </td>
+      <td><strong style="color: #fff">Output</strong>
+        <iframe name="targetCode" id="targetCodeb" style="background-color: powderblue; height: 320px;"></iframe></td>
+   </table>
+<script type="text/javascript" language="javascript">
+   function runcode() {
+    var content = document.getElementById('sourceCodeb').value;
+    var iframe = document.getElementById('targetCodeb');
+    iframe = (iframe.contentWindow)?iframe.contentWindow:(iframe.contentDocument)?iframe.contentDocument.document:
+      iframe.contentDocument;
+
+     iframe.document.open();
+     iframe.document.write(content);
+     iframe.document.close();
+     return false;
+   }
+   runcode();
+</script>
+ <center><input onclick="runcode();" type="button" value="Run code" style="background-color: #fff; color: #000; border-radius: 20px;padding: 10px;margin-top: 10px;margin-bottom: 10px;" ></center>
+</div>
+</div>
+<br><br>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h3 style="margin-left: 5px; "><b>3)Floating Point: </b></h3><br>
+<div style="margin-top: 15px; margin-left: 40px; margin-right: 15px;">
+
+	<h4 style="margin-left: 7px;">Definition:</h4>
+  <p style="margin-left: 20px;">  To define a floating-point value, you must include a decimal point and at least one number after the decimal point.
+An integer is required before a decimal point, but it is recommended
+  </p>
+
+<h4 style="margin-left: 7px;">Syntax:</h4>
+  <textarea style="height: 140px;background: grey; border-left:black SOLID 10px;">
+   <script type="text/javascript" language="javascript">
+      
+      var <var_name> = parseFloat(floating_value);  
+    
+   </script> 
+  </textarea>
+<br><br>
+
+<div style="background: black; color: white; padding: 40px; padding-top: 25px; padding-bottom: 0px; height: 500px;">
+<table width="100%" border="0" cellpadding="5">
+      <tr>
+        <td width="50%"  scope="col">&nbsp;</td>
+        <td width="50%" scope="col" align="left">
+      
+        </td>
+      </tr>
+      <h4>Float value Declaration program:</h4>
+      <td>
+        <form>
+          <strong style="color: #fff; ">Code</strong>
+          <textarea name="sourceCode" id="sourceCodec" style="background-color:powderblue; height: 300px;">
+            <!DOCTYPE html>
+            <html>
+            <head>
+              <title>Hello</title>
+            </head>
+            <body >
+              <script type="text/javascript" language="javascript">
+              		var a = parseFloat("10")
+				var b = parseFloat("10.00")
+				var c = parseFloat("10.33")  
+
+				document.write("<br>"+a+"<br>"+b+"<br>"+c);     
+
+              </script>   
+            </body>
+            </html>
+          </textarea>
+        </form>
+      </td>
+      <td><strong style="color: #fff">Output</strong>
+        <iframe name="targetCode" id="targetCodec" style="background-color: powderblue; height: 300px;"></iframe></td>
+   </table>
+<script type="text/javascript" language="javascript">
+   function runcode() {
+    var content = document.getElementById('sourceCodec').value;
+    var iframe = document.getElementById('targetCodec');
+    iframe = (iframe.contentWindow)?iframe.contentWindow:(iframe.contentDocument)?iframe.contentDocument.document:
+      iframe.contentDocument;
+
+     iframe.document.open();
+     iframe.document.write(content);
+     iframe.document.close();
+     return false;
+   }
+   runcode();
+</script>
+ <center><input onclick="runcode();" type="button" value="Run code" style="background-color: #fff; color: #000; border-radius: 20px;padding: 10px;margin-top: 10px;margin-bottom: 10px;" ></center>
+</div>
+</div>
+<br><br>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h3 style="margin-left: 5px; "><b>4) Integer: </b></h3><br>
+<div style="margin-top: 15px; margin-left: 40px; margin-right: 15px;">
+
+	<h4 style="margin-left: 7px;">Definition:</h4>
+  <p style="margin-left: 20px;"> Integer variables are variables that must take an integer value (0, 1, 2, ...). A special kind of integer variables is binary variables.</p>
+
+<h4 style="margin-left: 7px;">Syntax:</h4>
+  <textarea style="height: 140px;background: grey; border-left:black SOLID 10px;">
+   <script type="text/javascript" language="javascript">
+      
+      var <variable_name>=parseInt(value);  
+    
+   </script> 
+  </textarea>
+<br><br>
+
+<div style="background: black; color: white; padding: 40px; padding-top: 25px; padding-bottom: 0px; height: 500px;">
+<table width="100%" border="0" cellpadding="5">
+      <tr>
+        <td width="50%"  scope="col">&nbsp;</td>
+        <td width="50%" scope="col" align="left">
+      
+        </td>
+      </tr>
+      <h4>Integer Variable Declaration program:</h4>
+      <td>
+        <form>
+          <strong style="color: #fff; ">Code</strong>
+          <textarea name="sourceCode" id="sourceCoded" style="background-color:powderblue; height: 300px;">
+            <!DOCTYPE html>
+            <html>
+            <head>
+              <title>Hello</title>
+            </head>
+            <body >
+              <script type="text/javascript" language="javascript">
+              		
+              		var a = parseInt("10") + "<br>";
+ 					var b = parseInt("10.00") + "<br>";
+					var c = parseInt("10.33") + "<br>";
+                  	
+                  	document.write(a,b,c);	
+              </script>   
+            </body>
+            </html>
+          </textarea>
+        </form>
+      </td>
+      <td><strong style="color: #fff">Output</strong>
+        <iframe name="targetCode" id="targetCoded" style="background-color: powderblue; height: 300px; "></iframe></td>
+   </table>
+<script type="text/javascript" language="javascript">
+   function runcode() {
+    var content = document.getElementById('sourceCoded').value;
+    var iframe = document.getElementById('targetCoded');
+    iframe = (iframe.contentWindow)?iframe.contentWindow:(iframe.contentDocument)?iframe.contentDocument.document:
+      iframe.contentDocument;
+
+     iframe.document.open();
+     iframe.document.write(content);
+     iframe.document.close();
+     return false;
+   }
+   runcode();
+</script>
+  <center><input onclick="runcode();" type="button" value="Run code" style="background-color: #fff; color: #000; border-radius: 20px;padding: 10px;margin-top: 10px;margin-bottom: 10px;" ></center></div>
+</div>
+<br><br>
+
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h3 style="margin-left: 5px; "><b>5) Object String: </b></h3><br>
+<div style="margin-top: 15px; margin-left: 40px; margin-right: 15px;">
+
+	<h4 style="margin-left: 7px;">Definition:</h4>
+  <p style="margin-left: 20px;"> The String object lets you work with a series of characters<br>As JavaScript automatically converts between string primitives and String objects.</p>
+
+<h4 style="margin-left: 7px;">Syntax:</h4>
+  <textarea style="height: 140px;background: grey; border-left:black SOLID 10px;">
+   <script type="text/javascript" language="javascript">
+      
+      var <variable_name> = new String(string);
+    
+   </script> 
+  </textarea>
+<br><br>
+
+<div style="background: black; color: white; padding: 40px; padding-top: 25px; padding-bottom: 0px; height: 500px;">
+<table width="100%" border="0" cellpadding="5">
+      <tr>
+        <td width="50%"  scope="col">&nbsp;</td>
+        <td width="50%" scope="col" align="left">
+      
+        </td>
+      </tr>
+      <h4>Object String Declaration program:</h4>
+      <td>
+        <form>
+          <strong style="color: #fff; ">Code</strong>
+          <textarea name="sourceCode" id="sourceCodee" style="background-color:powderblue; height: 300px;">
+            <!DOCTYPE html>
+            <html>
+            <head>
+              <title>Hello</title>
+            </head>
+            <body >
+              <script type="text/javascript" language="javascript">
+              
+              		var val = new String("string");
+              		document.write(val);
+              
+              </script>   
+            </body>
+            </html>
+          </textarea>
+        </form>
+      </td>
+      <td><strong style="color: #fff">Output</strong>
+        <iframe name="targetCode" id="targetCodee" style="background-color: powderblue; height: 300px;"></iframe></td>
+   </table>
+<script type="text/javascript" language="javascript">
+   function runcode() {
+    var content = document.getElementById('sourceCodee').value;
+    var iframe = document.getElementById('targetCodee');
+    iframe = (iframe.contentWindow)?iframe.contentWindow:(iframe.contentDocument)?iframe.contentDocument.document:
+      iframe.contentDocument;
+
+     iframe.document.open();
+     iframe.document.write(content);
+     iframe.document.close();
+     return false;
+   }
+   runcode();
+</script>
+  <center><input onclick="runcode();" type="button" value="Run code" style="background-color: #fff; color: #000; border-radius: 20px;padding: 10px;margin-top: 10px;margin-bottom: 10px;" ></center>
+</div>
+</div>
+<br><br>
+
+
+</body>
+</html>
+
+

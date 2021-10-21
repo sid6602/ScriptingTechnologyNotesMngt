@@ -1,0 +1,495 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>3.1</title>
+</head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous"></head>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+ <style type="text/css">
+ 	.tal:hover{ 
+           color: red;
+ 	}
+ 	textarea ,iframe{
+ 		border:2px solid #ddd;
+ 		height: 500px;
+ 		width: 100%; 
+ 	}
+ 
+	*{
+ margin: 0px;
+ padding: 0px;
+}
+
+	h2.head{
+		background: grey;
+		padding-top: 10px;
+		padding-bottom: 10px;
+		text-align: center;
+		color: #fff;
+	}
+
+  textarea.a{
+     background: grey; border-left:black SOLID 10px;
+  }
+</style>
+<body>
+
+
+<!-- 3.1 -->
+  <h2 class="head" ><marquee behavior="Alternate">Conditional Statements</marquee></h2><br>
+  
+  <h3 style="margin-left: 5px; "><b>1) If </b></h3><br>
+<div style="margin-top: 15px; margin-left: 40px; margin-right: 15px;">
+
+  <h4 style="margin-left: 7px;">Definition:</h4>
+  <p style="margin-left: 20px;"> if statement is the most simple decision making statement. It is used to decide whether a certain statement or block of statements will be executed or not <br>i.e if a certain condition is true then a block of statement is executed otherwise not.</p>
+
+<h4 style="margin-left: 7px;">Syntax:</h4>
+  <textarea class="a" style="height: 160px;">
+   <script type="text/javascript" language="javascript">
+            if (condition)
+          {
+         //  block of code to be executed if the condition is true
+      }
+   </script> 
+  </textarea>
+<br><br>
+
+<div style="background: black; color: white; padding: 40px; padding-top: 25px; padding-bottom: 0px; height: 550px;">
+<table width="100%" border="0" cellpadding="5">
+      <tr>
+        <td width="50%"  scope="col">&nbsp;</td>
+        <td width="50%" scope="col" align="left">
+      
+        </td>
+      </tr>
+      <h4>Program using If</h4>
+      <td>
+        <form>
+          <strong style="color: #fff; ">Code</strong>
+          <textarea name="sourceCode" id="sourceCode111" style="background-color:powderblue; height: 370px;">
+            <!DOCTYPE html>
+            <html>
+            <head>
+              <title>Hello</title>
+            </head>
+            <body >
+              <script type="text/javascript" language="javascript">
+              var a=10
+ if (a=10)
+ {
+ document.write("value of a is 10");          
+ }
+              </script>   
+            </body>
+            </html>
+          </textarea>
+        </form>
+      </td>
+      <td><strong style="color: #fff">Output</strong>
+        <iframe name="targetCode" id="targetCode111" style="background-color: powderblue; height: 370px;"></iframe></td>
+   </table>
+<script type="text/javascript" language="javascript">
+   function runcode() {
+    var content = document.getElementById('sourceCode111').value;
+    var iframe = document.getElementById('targetCode111');
+    iframe = (iframe.contentWindow)?iframe.contentWindow:(iframe.contentDocument)?iframe.contentDocument.document:
+      iframe.contentDocument;
+
+     iframe.document.open();
+     iframe.document.write(content);
+     iframe.document.close();
+     return false;
+   }
+   runcode();
+</script>
+  <center><input onclick="runcode();" type="button" value="Run code" style="background-color: #fff; color: #000; border-radius: 20px;padding: 10px;margin-top: 10px;margin-bottom: 10px;" ></center>
+</div>
+</div>
+<br><br>
+
+
+
+
+
+
+
+
+
+
+
+  <h3 style="margin-left: 5px; "><b>2) If...else</b></h3><br>
+<div style="margin-top: 15px; margin-left: 40px; margin-right: 15px;">
+
+  <h4 style="margin-left: 7px;">Definition:</h4>
+  <p style="margin-left: 20px;">The if/else statement executes a block of code if a specified condition is true. If the condition is false, another block of code can be executed.<br> The if/else statement is a part of JavaScript's "Conditional" Statements, which are used to perform different actions based on different conditions. </p>
+
+<h4 style="margin-left: 7px;">Syntax:</h4>
+  <textarea class="a" style="height: 250px;">
+   <script type="text/javascript" language="javascript">
+      			if (condition)
+    			{
+ 				 //  block of code to be executed if the condition is true
+ 			}
+ 		else 
+ 			{	
+  				//  block of code to be executed if the condition is false
+			}
+   </script> 
+  </textarea>
+<br><br>
+
+<div style="background: black; color: white; padding: 40px; padding-top: 25px; padding-bottom: 0px;">
+<table width="100%" border="0" cellpadding="5">
+      <tr>
+        <td width="50%"  scope="col">&nbsp;</td>
+        <td width="50%" scope="col" align="left">
+      
+        </td>
+      </tr>
+      <h4>Program using If...else</h4>
+      <td>
+        <form>
+          <strong style="color: #fff; ">Code</strong>
+          <textarea name="sourceCode" id="sourceCode112" style="background-color:powderblue;">
+            <!DOCTYPE html>
+            <html>
+            <head>
+              <title>Hello</title>
+            </head>
+            <body >
+              <script type="text/javascript" language="javascript">
+              var a=10;
+              var b=5; 
+              	
+              	if (a<b)
+    				{
+ 				      document.write("a is less than b"); 					}
+ 				else 
+ 					{	
+  					  document.write("b is less than a")
+					}     
+                  
+              </script>   
+            </body>
+            </html>
+          </textarea>
+        </form>
+      </td>
+      <td><strong style="color: #fff">Output</strong>
+        <iframe name="targetCode" id="targetCode112" style="background-color: powderblue"></iframe></td>
+   </table>
+<script type="text/javascript" language="javascript">
+   function runcode() {
+    var content = document.getElementById('sourceCode112').value;
+    var iframe = document.getElementById('targetCode112');
+    iframe = (iframe.contentWindow)?iframe.contentWindow:(iframe.contentDocument)?iframe.contentDocument.document:
+      iframe.contentDocument;
+
+     iframe.document.open();
+     iframe.document.write(content);
+     iframe.document.close();
+     return false;
+   }
+   runcode();
+</script>
+  <center><input onclick="runcode();" type="button" value="Run code" style="background-color: #fff; color: #000; border-radius: 20px;padding: 10px;margin-top: 10px;margin-bottom: 10px;" ></center>
+</div>
+</div>
+<br><br>
+
+
+
+
+
+
+
+
+
+<h3 style="margin-left: 5px; "><b>3) Nested if else </b></h3><br>
+<div style="margin-top: 15px; margin-left: 40px; margin-right: 15px;">
+
+  <h4 style="margin-left: 7px;">Definition:</h4>
+  <p style="margin-left: 20px;"> A nested if is an if statement that is the target of another if or else. Nested if statements means an if statement inside an if statement. <br>JavaScript allows us to nest if statements within if statements. i.e, we can place an if statement inside another if statement. </p>
+  <p>In this we can nest any conditional statements in another conditional statemant.</p>
+
+<h4 style="margin-left: 7px;">Syntax:</h4>
+  <textarea class="a" style="height: 275px;">
+   <script type="text/javascript" language="javascript">
+            if (condition1) {
+   // Executes when condition1 is true
+   if (condition2) {
+      // Executes when condition2 is true
+   }
+}
+else{
+  statement;
+}
+   </script> 
+  </textarea>
+<br><br>
+
+<div style="background: black; color: white; padding: 40px; padding-top: 25px; padding-bottom: 0px;">
+<table width="100%" border="0" cellpadding="5">
+      <tr>
+        <td width="50%"  scope="col">&nbsp;</td>
+        <td width="50%" scope="col" align="left">
+      
+        </td>
+      </tr>
+      <h4>Program using Nested If Else</h4>
+      <td>
+        <form>
+          <strong style="color: #fff; ">Code</strong>
+          <textarea name="sourceCode" id="sourceCode113" style="background-color:powderblue;">
+            <!DOCTYPE html>
+            <html>
+            <head>
+              <title>Hello</title>
+            </head>
+            <body >
+              <script type="text/javascript" language="javascript">
+              var a=-20;  
+if(a>0){  
+document.write("a is positive");  
+}  
+else if(a<0){  
+document.write("a is negative");  
+}
+else{  
+document.write("a is equal to 0");  
+}  
+              </script>   
+            </body>
+            </html>
+          </textarea>
+        </form>
+      </td>
+      <td><strong style="color: #fff">Output</strong>
+        <iframe name="targetCode" id="targetCode113" style="background-color: powderblue"></iframe></td>
+   </table>
+<script type="text/javascript" language="javascript">
+   function runcode() {
+    var content = document.getElementById('sourceCode113').value;
+    var iframe = document.getElementById('targetCode113');
+    iframe = (iframe.contentWindow)?iframe.contentWindow:(iframe.contentDocument)?iframe.contentDocument.document:
+      iframe.contentDocument;
+
+     iframe.document.open();
+     iframe.document.write(content);
+     iframe.document.close();
+     return false;
+   }
+   runcode();
+</script>
+  <center><input onclick="runcode();" type="button" value="Run code" style="background-color: #fff; color: #000; border-radius: 20px;padding: 10px;margin-top: 10px;margin-bottom: 10px;" ></center>
+</div>
+</div>
+<br><br>
+
+
+
+
+
+
+
+
+
+
+<h3 style="margin-left: 5px; "><b>4) Else if ladder </b></h3><br>
+<div style="margin-top: 15px; margin-left: 40px; margin-right: 15px;">
+
+  <h4 style="margin-left: 7px;">Definition:</h4>
+  <p style="margin-left: 20px;"> The if statements are executed from the top down. As soon as one of the conditions controlling the if is true, the statement associated with that if is executed, and the rest of the ladder is bypassed.<br> If none of the conditions is true, then the final else statement will be executed.</p>
+
+<h4 style="margin-left: 7px;">Syntax:</h4>
+  <textarea class="a" style="height: 370px;">
+   <script type="text/javascript" language="javascript">
+            if (condition)
+            {
+    statement;
+  }
+else if (condition)
+    {
+      statement;
+}.
+.
+else
+{
+    statement;
+ }
+   </script> 
+  </textarea>
+<br><br>
+
+<div style="background: black; color: white; padding: 40px; padding-top: 25px; padding-bottom: 0px;">
+<table width="100%" border="0" cellpadding="5">
+      <tr>
+        <td width="50%"  scope="col">&nbsp;</td>
+        <td width="50%" scope="col" align="left">
+      
+        </td>
+      </tr>
+      <h4>Program using Else If Ladder</h4>
+      <td>
+        <form>
+          <strong style="color: #fff; ">Code</strong>
+          <textarea name="sourceCode" id="sourceCode114" style="background-color:powderblue;">
+            <!DOCTYPE html>
+            <html>
+            <head>
+              <title>Hello</title>
+            </head>
+            <body >
+              <script type="text/javascript" language="javascript">
+              var a=20;  
+if(a==10){  
+document.write("a is equal to 10");  
+}  
+else if(a==15){  
+document.write("a is equal to 15");  
+}  
+else if(a==20){  
+document.write("a is equal to 20");  
+}  
+else{  
+document.write("a is not equal to 10, 15 or 20");  
+}  
+              </script>   
+            </body>
+            </html>
+          </textarea>
+        </form>
+      </td>
+      <td><strong style="color: #fff">Output</strong>
+        <iframe name="targetCode" id="targetCode114" style="background-color: powderblue"></iframe></td>
+   </table>
+<script type="text/javascript" language="javascript">
+   function runcode() {
+    var content = document.getElementById('sourceCode114').value;
+    var iframe = document.getElementById('targetCode114');
+    iframe = (iframe.contentWindow)?iframe.contentWindow:(iframe.contentDocument)?iframe.contentDocument.document:
+      iframe.contentDocument;
+
+     iframe.document.open();
+     iframe.document.write(content);
+     iframe.document.close();
+     return false;
+   }
+   runcode();
+</script>
+  <center><input onclick="runcode();" type="button" value="Run code" style="background-color: #fff; color: #000; border-radius: 20px;padding: 10px;margin-top: 10px;margin-bottom: 10px;" ></center>
+</div>
+</div>
+<br><br>
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+<h3 style="margin-left: 5px; "><b>5) Switch</b></h3><br>
+<div style="margin-top: 15px; margin-left: 40px; margin-right: 15px;">
+
+  <h4 style="margin-left: 7px;">Definition:</h4>
+  <p style="margin-left: 20px;">The switch statement evaluates an expression. The value of the expression is then compared with the values of each case in the structure. If there is a match, the associated block of code is executed. </p>
+
+<h4 style="margin-left: 7px;">Syntax:</h4>
+  <textarea style="height: 320px; background: grey; border-left:black SOLID 10px;">
+   <script type="text/javascript" language="javascript">
+      			switch(expression) 
+      			{
+  					case 1:
+    					// code block
+   					 break;
+  					case 2:
+   					    // code block
+    				break;
+  					default:
+    					// code block
+				} 
+   </script> 
+  </textarea>
+<br><br>
+
+<div style="background: black; color: white; padding: 40px; padding-top: 25px; padding-bottom: 0px;">
+<table width="100%" border="0" cellpadding="5">
+      <tr>
+        <td width="50%"  scope="col">&nbsp;</td>
+        <td width="50%" scope="col" align="left">
+      
+        </td>
+      </tr>
+      <h4>Program using Switch case</h4>
+      <td>
+        <form>
+          <strong style="color: #fff; ">Code</strong>
+          <textarea name="sourceCode" id="sourceCode115" style="background-color:powderblue;">
+            <!DOCTYPE html>
+            <html>
+            <head>
+              <title>Hello</title>
+            </head>
+            <body >
+              <script type="text/javascript" language="javascript">
+              var a=20,b=10,c,ch=2;
+switch(ch)
+{
+  case 1: c=a+b;
+  document.write("Addition is:",c);
+  break;
+  case 2: c=a-b;
+  document.write("Substraction is:",c);
+  break;
+  case 3: c=a/b;
+  document.write("Division is:",c);
+  break;
+  case 4: c=a*b;
+  document.write("Multiplication is:",c);
+  break;
+
+}
+
+              </script>   
+            </body>
+            </html>
+          </textarea>
+        </form>
+      </td>
+      <td><strong style="color: #fff">Output</strong>
+        <iframe name="targetCode" id="targetCode115" style="background-color: powderblue"></iframe></td>
+   </table>
+<script type="text/javascript" language="javascript">
+   function runcode() {
+    var content = document.getElementById('sourceCode115').value;
+    var iframe = document.getElementById('targetCode115');
+    iframe = (iframe.contentWindow)?iframe.contentWindow:(iframe.contentDocument)?iframe.contentDocument.document:
+      iframe.contentDocument;
+
+     iframe.document.open();
+     iframe.document.write(content);
+     iframe.document.close();
+     return false;
+   }
+   runcode();
+</script>
+ <center><input onclick="runcode();" type="button" value="Run code" style="background-color: #fff; color: #000; border-radius: 20px;padding: 10px;margin-top: 10px;margin-bottom: 10px;" ></center>
+</div>
+</div>
+<br><br>
+
+</body>
+</html>

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>unit 4</title>
+</head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous"></head>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+ <style type="text/css">
+  .tal:hover{ 
+           color: red;
+  }
+  textarea ,iframe{
+    border:2px solid #ddd;
+    height: 500px;
+    width: 100%; 
+  }
+ 
+  *{
+ margin: 0px;
+ padding: 0px;
+}
+  textarea.a{
+     background: grey; border-left:black SOLID 10px;
+  }
+  h2.head{
+    background: grey;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    text-align: center;
+    color: #fff;
+  }
+</style>
+<body>
+
+
+<!-- 4.1 -->
+  
+  <h2 class="head"><marquee behavior="Alternate"><b> JavaScript User-Defined Functions</b></marquee></h2><br></br>
+<div style="margin-top: 15px; margin-left: 15px; margin-right: 15px;">
+  <h3 style="margin-left: 7px;"><b>Definition:</h3></b></br>
+  <p style="margin-left: 20px;">An user-defined function saves  us from  rewriting the same code again and again and helps us to make our application smaller. The given examples will help you to understand how can you put them to work.</br>
+  a user defined function is a programmed routine that its parameters set by the user of the system. User defined functions often are seen as programming shortcuts as they define functions that perform specific tasks within a larger system, such as a database or spreadsheet program.</br>
+JavaScript has so many built-in functions, besides  that you can make your own as per the need.</p></br>
+<h3 style="margin-left: 7px;"><b>Syntax:</h3></b></br>
+<div style="margin-top: 15px; margin-left: 15px; margin-right: 15px;">
+  <textarea class="a" style="height: 160px;">
+   <script type="text/javascript" language="javascript">
+      
+    var <variable-name>;    
+    var <variable-name> = <value>;
+
+   </script> 
+  </textarea>
+<br><br>
+
+<div style="background: black; color: white; padding: 40px; padding-top: 25px; padding-bottom: 0px; height: 480px;">
+<table width="100%" border="0" cellpadding="5">
+      <tr>
+        <td width="50%"  scope="col">&nbsp;</td>
+        <td width="50%" scope="col" align="left">
+      
+        </td>
+      </tr>
+      <p>Simple Hello World Program using user defined function:</p>
+      <td>
+        <form>
+          <strong style="color: #fff; ">Code</strong>
+          <textarea name="sourceCode" id="sourceCode" style="background-color:powderblue;height: 330px;">
+            <!DOCTYPE html>
+             <html>
+             <head>
+             <title>Write your title here </title>
+            <script type="text/javascript" >
+            function display()
+            {
+            document.write("Hello World");
+            }
+            display();
+          </script>
+          </head>
+         </html>
+          </textarea>
+        </form>
+      </td>
+      <td><strong style="color: #fff">Output</strong>
+        <iframe name="targetCode" id="targetCode" style="background-color: powderblue;height: 330px;"></iframe></td>
+   </table>
+<script type="text/javascript" language="javascript">
+   function runcode() {
+    var content = document.getElementById('sourceCode').value;
+    var iframe = document.getElementById('targetCode');
+    iframe = (iframe.contentWindow)?iframe.contentWindow:(iframe.contentDocument)?iframe.contentDocument.document:
+      iframe.contentDocument;
+
+     iframe.document.open();
+     iframe.document.write(content);
+     iframe.document.close();
+     return false;
+   }
+   runcode();
+</script>
+  <center><input onclick="runcode();" type="button" value="Run code" ></center>
+</div></body></br></div>
+</body>
+</html>

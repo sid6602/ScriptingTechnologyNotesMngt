@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>1.2</title>
+</head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous"></head>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+ <style type="text/css">
+ 	.tal:hover{ 
+           color: red;
+ 	}
+ 	textarea ,iframe{
+ 		border:2px solid #ddd;
+ 		height: 500px;
+ 		width: 100%; 
+ 	}
+ 
+	*{
+ margin: 0px;
+ padding: 0px;
+}
+
+	h2.head{
+		background: grey;
+		padding-top: 10px;
+		padding-bottom: 10px;
+		text-align: center;
+		color: #fff;
+	}
+  p{
+    margin-left: 20px;
+  }
+</style>
+<body>
+
+
+<!-- 1.2 -->
+  <h2 class="head" ><marquee behavior="Alternate">Declaration of variable and Constant</marquee></h2><br>
+  <h3 style="margin-left: 5px; "><b>Simple Variable Declaration</b></h3><br>
+<div style="margin-top: 15px; margin-left: 40px; margin-right: 15px;">
+
+  <h4 style="margin-left: 7px;">Definition:</h4>
+  <p style="margin-left: 20px;"> Variable means anything that can vary. JavaScript includes variables which hold the data value and it can be changed anytime.<br>
+
+JavaScript uses reserved keyword var to declare a variable. A variable must have a unique name. You can assign a value to a variable using equal to (=) operator when you declare it or before using it. </p>
+
+<h4 style="margin-left: 7px;">Syntax:</h4>
+  <textarea style="height: 160px;background: grey; border-left:black SOLID 10px;">
+   <script type="text/javascript" language="javascript">
+      
+    var <variable-name>;
+    var <variable-name> = <value>;
+
+   </script> 
+  </textarea>
+<br><br>
+
+<div style="background: black; color: white; padding: 40px; padding-top: 25px; padding-bottom: 0px;">
+<table width="100%" border="0" cellpadding="5">
+      <tr>
+        <td width="50%"  scope="col">&nbsp;</td>
+        <td width="50%" scope="col" align="left">
+      
+        </td>
+      </tr>
+      <h4>Various types of variable declarations are given in below program:</h4>
+      <td>
+        <form>
+          <strong style="color: #fff; ">Code</strong>
+          <textarea name="sourceCode" id="sourceCode1" style="background-color:powderblue;">
+            <!DOCTYPE html>
+            <html>
+            <head>
+              <title>Hello</title>
+            </head>
+            <body >
+              <script type="text/javascript" language="javascript">
+                    
+                  //Example no. 1:- variable stores numeric value:
+                  var one = 1; 
+                  
+
+                  //Example no. 2:- variable stores string value
+                  var two = 'two';  
+                  
+
+                  //Example no. 3:- declared a variable without assigning a value
+                  var three;  
+
+
+                  //Example no. 4:-Declare Variables in a Single Line: JavaScript allows variable declaration without var keyword. You must assign a value when you declare a variable without var keyword. 
+                  var one = 1, two = 'two', three; 
+
+
+                  //Example no. 5:-Variable without var Keyword
+				  one = 1;  two = 'two'; 
+
+                  
+                  //Example no. 6:- White Spaces and Line Breaks in JavaScript: Please note that semicolon is optional.
+                  var
+                        one
+                        =
+                        1,
+                            two
+                                =
+                                "two" 
+
+                    document.write("1)"+"<br>"+one+"<br>"+"<br>");
+                    document.write("2)"+"<br>"+two+"<br>"+"<br>");
+                    document.write("3)"+"<br>"+three+"<br>"+"<br>");
+                    document.write("4)"+"<br>"+one+"<br>"+two+"<br>"+three+"<br>"+"<br>");
+                    document.write("5)"+"<br>"+one+two+"<br>"+"<br>");
+                    document.write("6)"+"<br>"+one+two+"<br>"+"<br>");
+
+                 </script>   
+            </body>
+            </html>
+          </textarea>
+        </form>
+      </td>
+      <td><strong style="color: #fff">Output</strong>
+        <iframe name="targetCode" id="targetCode1" style="background-color: powderblue"></iframe></td>
+   </table>
+<script type="text/javascript" language="javascript">
+   function runcode() {
+    var content = document.getElementById('sourceCode1').value;
+    var iframe = document.getElementById('targetCode1');
+    iframe = (iframe.contentWindow)?iframe.contentWindow:(iframe.contentDocument)?iframe.contentDocument.document:
+      iframe.contentDocument;
+
+     iframe.document.open();
+     iframe.document.write(content);
+     iframe.document.close();
+     return false;
+   }
+   runcode();
+</script>
+  <center><input onclick="runcode();" type="button" value="Run code" style="background-color: #fff; color: #000; border-radius: 20px;padding: 10px;margin-top: 10px;margin-bottom: 10px;" ></center>
+</div>
+</div>
+<br><br>
+
+
+
+
+
+ <h3 style="margin-left: 5px; "><b>Constant Variable Declaration</b></h3>
+<div style="margin-top: 15px; margin-left: 40px; margin-right: 15px;">
+ <h4 style="margin-left: 7px;">Definition:</h4>
+  <p style="margin-left: 20px;">Constants are declared with const keyword and assigned at the time of the declaration. A constant can be global or local to a function where it is declared. <br>The value of const remains the same, you can’t change and declare it again.</p>
+
+<h4 style="margin-left: 7px;">Syntax:</h4>
+  <textarea style="height: 160px;background: grey; border-left:black SOLID 10px;">
+   <script type="text/javascript" language="javascript">
+      
+      const <variable-name> = <value>;
+
+   </script> 
+  </textarea>
+<br><br>
+
+<h4 style="margin-left: 7px;">Example:</h4>
+  <textarea style="height: 270px; background: grey; border-left:black SOLID 10px;">
+   <script type="text/javascript" language="javascript">
+      
+	// declared ‘a’ as a constant variable.
+	const a = 150;
+	// Assigning a new value to `a` will fail since ‘a’ is a constant variable
+	a= 0;
+	a++;
+	// The below declarations won’t work
+	var a = 0;
+
+   </script> 
+  </textarea>
+<br><br>
+
+
+</div>
+</body>
+</html>

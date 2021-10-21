@@ -1,0 +1,125 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>5.3</title>
+</head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous"></head>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+ <style type="text/css">
+ 	.tal:hover{ 
+           color: red;
+ 	}
+ 	textarea ,iframe{
+ 		border:2px solid #ddd;
+ 		height: 300px;
+ 		width: 100%; 
+ 	}
+ 
+	*{
+ margin: 0px;
+ padding: 0px;
+}
+
+	h2.head{
+		background: grey;
+		padding-top: 10px;
+		padding-bottom: 10px;
+		text-align: center;
+		color: #fff;
+	}
+
+  h3{
+    margin-left: 7px;
+  }
+
+  p{
+    margin-left: 20px;
+  }
+
+  textarea.a{
+    height: 40px; background: grey; border-left:black SOLID 10px;
+  }
+  table{
+    width: 800px;
+    margin: auto;
+    text-align: center;
+    table-layout: fixed;
+
+  }
+  table ,tr,th,td{
+    padding: 20px;
+    color: white;
+    border:1px solid #080808;
+    border-collapse: collapse;
+    font-size: 20px;
+    font-family: arial;
+    background: linear-gradient(top, #3c3c3c 0%,#222222 100%);
+    background: -webkit-linear-gradient(top, #3c3c3c 0%,#222222 100%)
+  }
+  td:hover{
+    background:orange;
+  }
+</style>
+<body>
+ 
+	<h2 class="head"><marquee behavior="Alternate">Declaration, Evaluation and Scope of Variables</marquee></h2><br>
+	<div style="margin-top: 15px; margin-left: 40px; margin-right: 15px;">
+
+	<h3>Vbscript Variables</h3>
+
+	<p>A variable is a named memory location used to hold a value that can be changed during the script execution. VBScript has only ONE fundamental data type, Variant. </p>
+<br>
+<br>
+
+ <h4>Rules for Declaring variable:</h4>
+<ul style="padding-left: 20px;" type="square">
+  <li>Variable Name must begin with an alphabet.</li>
+  <li>Variable names cannot exceed 255 characters.</li>
+  <li>Variables Should NOT contain a period (.)</li>
+  <li>Variable Names should be unique in the declared context.</li>
+</ul><br><br>
+<h3>Declaration Variables:</h3>
+  <p>Variables are declared using “dim” keyword. Since there is only ONE fundamental data type, all the declared variables are variant by default. Hence, a user NEED NOT mention the type of data during declaration. </p>
+  <br><br>
+  <h4>Example −In this Example, IntValue can be used as a String, Integer or even arrays.</h4>
+  <textarea class="a">
+   Dim var
+  </textarea>
+<br><br>
+<h3>Scope of Variables:</h3>
+  <p>A variable is a named memory location used to hold a value that can be changed during the script execution. VBScript has only ONE fundamental data type, Variant. </p>
+<br>
+<ul style="padding-left: 20px;" type="square">
+  <li>Dim</li>
+  <li>Public</li>
+  <li>Private</li>
+ </ul>
+<br>
+ </p>
+<br>
+  <h3>Dim</h3>
+  <p>Variables declared using “Dim” keyword at a Procedure level are available only within the same procedure. Variables declared using “Dim” Keyword at script level are available to all the procedures within the same script.</p>
+<br>
+  <h3>Public</h3>
+  <p>Variables declared using "Public" Keyword are available to all the procedures across all the associated scripts. When declaring a variable of type "public", Dim keyword is replaced by "Public".
+</p>
+<br>
+
+  <h3>Private</h3>
+  <p>Variables that are declared as "Private" have scope only within that script in which they are declared. When declaring a variable of type "Private", Dim keyword is replaced by "Private".</p>
+<br>
+<br>
+
+  <h3>Evaluation of variables</h3>
+  <p>A variable declared using the var statement with no initial value specified has the value undefined . ... The following is related to “Variables” section as potential values in assignment. The undefined value behaves as false when used in a boolean context.</p>
+<br>
+
+</body>
+</html>
+

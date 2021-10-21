@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>3.4</title>
+</head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous"></head>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+ <style type="text/css">
+ 	.tal:hover{ 
+           color: red;
+ 	}
+ 	textarea ,iframe{
+ 		border:2px solid #ddd;
+ 		height: 500px;
+ 		width: 100%; 
+ 	}
+ 
+	*{
+ margin: 0px;
+ padding: 0px;
+}
+
+	h2.head{
+		background: grey;
+		padding-top: 10px;
+		padding-bottom: 10px;
+		text-align: center;
+		color: #fff;
+	}
+
+  textarea.a{
+     background: grey; border-left:black SOLID 10px;
+  }
+</style>
+<body>
+<h2 class="head" ><marquee behavior="Alternate">Exception handling- throw, try..catch</marquee></h2><br>
+  <h3 style="margin-left: 5px; "><b>1) Throw </b></h3><br>
+<div style="margin-top: 15px; margin-left: 40px; margin-right: 15px;">
+<p>The throw statement throws (generates) an error. When an error occurs, JavaScript will normally stop, and generate an error message. <br>The technical term for this is: JavaScript will throw an error. <br>The throw statement allows you to create a custom error. The technical term for this is: throw an exception.</p>
+
+<h4 style="margin-left: 7px;">Syntax:</h4>
+  <textarea class="a" style="height: 110px;">
+   <script type="text/javascript" language="javascript">
+            throw expression; 
+   </script> 
+  </textarea>
+</div>
+<br><br>
+
+
+<h3 style="margin-left: 5px; "><b>2) Try...catch </b></h3><br>
+<div style="margin-top: 15px; margin-left: 40px; margin-right: 15px;">
+<p>The try statement allows you to define a block of code to be tested for errors while it is being executed.<br> The catch statement allows you to define a block of code to be executed, if an error occurs in the try block.</p>
+
+<h4 style="margin-left: 7px;">Syntax:</h4>
+  <textarea class="a" style="height: 110px;">
+   <script type="text/javascript" language="javascript">
+            try {
+
+  // code...
+
+} catch (err) {
+
+  // error handling
+
+}
+   </script> 
+  </textarea>
+  <br>
+  <br>
+
+  <div style="background: black; color: white; padding: 40px; padding-top: 25px; padding-bottom: 0px; height: 550px;">
+<table width="100%" border="0" cellpadding="5">
+      <tr>
+        <td width="50%"  scope="col">&nbsp;</td>
+        <td width="50%" scope="col" align="left">
+      
+        </td>
+      </tr>
+      <h4>Program using for..in</h4>
+      <td>
+        <form>
+          <strong style="color: #fff; ">Code</strong>
+          <textarea name="sourceCode" id="sourceCode111" style="background-color:powderblue; height: 370px;">
+            <!DOCTYPE html>
+            <html>
+            <head>
+              <title>Hello</title>
+            </head>
+            <p id="demo"></p>
+            <body >
+              <script type="text/javascript" language="javascript">
+              try {
+  adddlert("Welcome guest!");
+}
+catch(err) {
+  document.getElementById("demo").innerHTML = err.message;
+}
+              </script>   
+            </body>
+            </html>
+          </textarea>
+        </form>
+      </td>
+      <td><strong style="color: #fff">Output</strong>
+        <iframe name="targetCode" id="targetCode111" style="background-color: powderblue; height: 370px;"></iframe></td>
+   </table>
+<script type="text/javascript" language="javascript">
+   function runcode() {
+    var content = document.getElementById('sourceCode111').value;
+    var iframe = document.getElementById('targetCode111');
+    iframe = (iframe.contentWindow)?iframe.contentWindow:(iframe.contentDocument)?iframe.contentDocument.document:
+      iframe.contentDocument;
+
+     iframe.document.open();
+     iframe.document.write(content);
+     iframe.document.close();
+     return false;
+   }
+   runcode();
+</script>
+  <center><input onclick="runcode();" type="button" value="Run code" style="background-color: #fff; color: #000; border-radius: 20px;padding: 10px;margin-top: 10px;margin-bottom: 10px;" ></center>
+</div>
+</div>
+<br><br>
+</div>
+</body>
+</html>
