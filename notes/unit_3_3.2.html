@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>3.2</title>
+</head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous"></head>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+ <style type="text/css">
+ 	.tal:hover{ 
+           color: red;
+ 	}
+ 	textarea ,iframe{
+ 		border:2px solid #ddd;
+ 		height: 400px;
+ 		width: 100%; 
+ 	}
+ 
+	*{
+ margin: 0px;
+ padding: 0px;
+ font-family: Arial, Helvetica, sans-serif;
+}
+
+	h2.head{
+		background: grey;
+		padding-top: 10px;
+		padding-bottom: 10px;
+		text-align: center;
+		color: #fff;
+	}
+  .head{
+		text-transform: uppercase;
+	}
+</style>
+<body>
+
+
+	<!-- 3.2 -->
+  <h2 class="head" >Loop- for, do...while, while, label,  break, continue.</h2><br>
+
+<h3 style="margin-left: 5px; "><b>1) while loop</b></h3><br>
+<div style="margin-top: 15px; margin-left: 40px; margin-right: 15px;">
+
+  <h4 style="margin-left: 7px;">Definition:</h4>
+  <p style="margin-left: 20px;"> The while statement creates a loop that is executed while a specified condition is true. <br>The loop will continue to run as long as the condition is true. It will only stop when the condition becomes false.</p>
+
+<h4 style="margin-left: 7px;">Syntax:</h4>
+  <textarea style="height: 150px;background: grey; border-left:black SOLID 10px;">
+   <script type="text/javascript" language="javascript">
+      
+        while (condition) 
+        {
+            //code block to be executed
+      }
+
+   </script> 
+  </textarea>
+<br><br>
+
+<div style="background: black; color: white; padding: 40px; padding-top: 25px; padding-bottom: 0px;">
+<table width="100%" border="0" cellpadding="5">
+      <tr>
+        <td width="50%"  scope="col">&nbsp;</td>
+        <td width="50%" scope="col" align="left">
+      
+        </td>
+      </tr>
+      <h4> Program using while loop</h4>
+      <td>
+        <form>
+          <strong style="color: #fff; ">Code</strong>
+          <textarea name="sourceCode" id="sourceCode121" style="background-color:powderblue;">
+            <!DOCTYPE html>
+            <html>
+            <head>
+              <title>Hello</title>
+            </head>
+            <body >
+              <script type="text/javascript" language="javascript">
+                    var i=1;
+                    document.write("To print no. from 1 to 10: "+"<br>"+"<br>")
+                   while(i<=10)
+                  {
+                    document.write(i+"<br>");
+                    i++;
+                  }   
+              </script>   
+            </body>
+            </html>
+          </textarea>
+        </form>
+      </td>
+      <td><strong style="color: #fff">Output</strong>
+        <iframe name="targetCode" id="targetCode121" style="background-color: powderblue"></iframe></td>
+   </table>
+<script type="text/javascript" language="javascript">
+   function runcode() {
+    var content = document.getElementById('sourceCode121').value;
+    var iframe = document.getElementById('targetCode121');
+    iframe = (iframe.contentWindow)?iframe.contentWindow:(iframe.contentDocument)?iframe.contentDocument.document:
+      iframe.contentDocument;
+
+     iframe.document.open();
+     iframe.document.write(content);
+     iframe.document.close();
+     return false;
+   }
+   runcode();
+</script>
+  <center><input onclick="runcode();" type="button" value="Run code" style="background-color: #fff; color: #000; border-radius: 20px;padding: 10px;margin-top: 10px;margin-bottom: 10px;" ></center>
+</div>
+</div>
+<br><br>
+
+
+
+
+
+
+
+
+<h3 style="margin-left: 5px; "><b>2) Do...while loop</b></h3><br>
+<div style="margin-top: 15px; margin-left: 40px; margin-right: 15px;">
+
+  <h4 style="margin-left: 7px;">Definition:</h4>
+  <p style="margin-left: 20px;"> The do/while statement creates a loop that executes a block of code once, before checking if the condition is true, then it will repeat the loop as long as the condition is true. <br>The do/while statement is used when you want to run a loop at least one time</p>
+
+<h4 style="margin-left: 7px;">Syntax:</h4>
+  <textarea style="height: 160px;background: grey; border-left:black SOLID 10px;">
+   <script type="text/javascript" language="javascript">
+      
+        do 
+        {
+          //code block to be executed
+      }while (condition);
+
+   </script> 
+  </textarea>
+<br><br>
+
+<div style="background: black; color: white; padding: 40px; padding-top: 25px; padding-bottom: 0px;">
+<table width="100%" border="0" cellpadding="5">
+      <tr>
+        <td width="50%"  scope="col">&nbsp;</td>
+        <td width="50%" scope="col" align="left">
+      
+        </td>
+      </tr>
+      <h4> Program using Do while loop</h4>
+      <td>
+        <form>
+          <strong style="color: #fff; ">Code</strong>
+          <textarea name="sourceCode" id="sourceCode122" style="background-color:powderblue;">
+            <!DOCTYPE html>
+            <html>
+            <head>
+              <title>Hello</title>
+            </head>
+            <body >
+              <script type="text/javascript" language="javascript">
+                    var i=1;
+                    document.write("To print no. from 1 to 10: "+"<br>"+"<br>")
+                  do
+                  {
+                    document.write(i+"<br>");
+                    i++;
+                  } while(i<=10);   
+              </script>   
+            </body>
+            </html>
+          </textarea>
+        </form>
+      </td>
+      <td><strong style="color: #fff">Output</strong>
+        <iframe name="targetCode" id="targetCode122" style="background-color: powderblue"></iframe></td>
+   </table>
+<script type="text/javascript" language="javascript">
+   function runcode() {
+    var content = document.getElementById('sourceCode122').value;
+    var iframe = document.getElementById('targetCode122');
+    iframe = (iframe.contentWindow)?iframe.contentWindow:(iframe.contentDocument)?iframe.contentDocument.document:
+      iframe.contentDocument;
+
+     iframe.document.open();
+     iframe.document.write(content);
+     iframe.document.close();
+     return false;
+   }
+   runcode();
+</script>
+  <center><input onclick="runcode();" type="button" value="Run code" style="background-color: #fff; color: #000; border-radius: 20px;padding: 10px;margin-top: 10px;margin-bottom: 10px;" ></center>
+</div>
+</div>
+<br><br>
+
+
+
+
+
+
+
+
+
+
+
+  <h3 style="margin-left: 5px; "><b>3) For loop</b></h3><br>
+<div style="margin-top: 15px; margin-left: 40px; margin-right: 15px;">
+
+  <h4 style="margin-left: 7px;">Definition:</h4>
+  <p style="margin-left: 20px;"> The for statement creates a loop that is executed as long as a condition is true. The loop will continue to run as long as the condition is true. <br>It will only stop when the condition becomes false.</p>
+
+<h4 style="margin-left: 7px;">Syntax:</h4>
+  <textarea style="height: 150px;background: grey; border-left:black SOLID 10px;">
+   <script type="text/javascript" language="javascript">
+      
+    	for (statement 1; statement 2; statement 3)
+    		{
+  				//code block to be executed
+			}
+
+   </script> 
+  </textarea>
+<br><br>
+
+<div style="background: black; color: white; padding: 40px; padding-top: 25px; padding-bottom: 0px; height: 550px;">
+<table width="100%" border="0" cellpadding="5">
+      <tr>
+        <td width="50%"  scope="col">&nbsp;</td>
+        <td width="50%" scope="col" align="left">
+      
+        </td>
+      </tr>
+      <h4> Program using for loop</h4>
+      <td>
+        <form>
+          <strong style="color: #fff; ">Code</strong>
+          <textarea name="sourceCode" id="sourceCode123" style="background-color:powderblue;height: 370px;">
+            <!DOCTYPE html>
+            <html>
+            <head>
+              <title>Hello</title>
+            </head>
+            <body >
+              <script type="text/javascript" language="javascript">
+                    var i;
+                    document.write("To print no. from 1 to 10: "+"<br>"+"<br>")
+              		for(i=1;i<=10;i++)
+              		{
+              			document.write(i+"<br>");
+              		}    
+              </script>   
+            </body>
+            </html>
+          </textarea>
+        </form>
+      </td>
+      <td><strong style="color: #fff">Output</strong>
+        <iframe name="targetCode" id="targetCode123" style="background-color: powderblue; height: 370px;"></iframe></td>
+   </table>
+<script type="text/javascript" language="javascript">
+   function runcode() {
+    var content = document.getElementById('sourceCode123').value;
+    var iframe = document.getElementById('targetCode123');
+    iframe = (iframe.contentWindow)?iframe.contentWindow:(iframe.contentDocument)?iframe.contentDocument.document:
+      iframe.contentDocument;
+
+     iframe.document.open();
+     iframe.document.write(content);
+     iframe.document.close();
+     return false;
+   }
+   runcode();
+</script>
+  <center><input onclick="runcode();" type="button" value="Run code" style="background-color: #fff; color: #000; border-radius: 20px;padding: 10px;margin-top: 10px;margin-bottom: 10px;" ></center>
+</div>
+</div>
+<br><br>
+
+
+
+
+
+
+
+<h3 style="margin-left: 5px; "><b>4) Label</b></h3><br>
+<div style="margin-top: 15px; margin-left: 40px; margin-right: 15px;">
+
+  <h4 style="margin-left: 7px;">Definition:</h4>
+  <p style="margin-left: 20px;">JavaScript label statements are used to prefix a label to an identifier. A label can be used with break and continue statement to control the flow more precisely.<br> A label is simply an identifier followed by a colon (:) that is applied to a statement or a block of code.</p>
+
+<h4 style="margin-left: 7px;">Syntax:</h4>
+  <textarea style="height: 100px;background: grey; border-left:black SOLID 10px;">
+   <script type="text/javascript" language="javascript">
+      label :
+      statements
+   </script> 
+  </textarea>
+<br><br>
+
+<div style="background: black; color: white; padding: 40px; padding-top: 25px; padding-bottom: 0px;height: 580px;   ">
+<table width="100%" border="0" cellpadding="5">
+      <tr>
+        <td width="50%"  scope="col">&nbsp;</td>
+        <td width="50%" scope="col" align="left">
+      
+        </td>
+      </tr>
+      <h4> Program using for Label</h4>
+      <td>
+        <form>
+          <strong style="color: #fff; ">Code</strong>
+          <textarea name="sourceCode" id="sourceCode124" style="background-color:powderblue;">
+            <!DOCTYPE html>
+            <html>
+            <head>
+              <title>Hello</title>
+            </head>
+            <body >
+              <script type="text/javascript" language="javascript">
+                    document.write("loop using label"+"<br>")
+                    even:
+                    for (i=1;i<=10;i++)
+                     {
+                     if (i % 2 == 1) continue even;
+                      document.write(i+"<br>");
+                      }
+              </script>   
+            </body>
+            </html>
+          </textarea>
+        </form>
+      </td>
+      <td><strong style="color: #fff">Output</strong>
+        <iframe name="targetCode" id="targetCode124" style="background-color: powderblue"></iframe></td>
+   </table>
+<script type="text/javascript" language="javascript">
+   function runcode() {
+    var content = document.getElementById('sourceCode124').value;
+    var iframe = document.getElementById('targetCode124');
+    iframe = (iframe.contentWindow)?iframe.contentWindow:(iframe.contentDocument)?iframe.contentDocument.document:
+      iframe.contentDocument;
+
+     iframe.document.open();
+     iframe.document.write(content);
+     iframe.document.close();
+     return false;
+   }
+   runcode();
+</script>
+  <center><input onclick="runcode();" type="button" value="Run code" style="background-color: #fff; color: #000; border-radius: 20px;padding: 10px;margin-top: 10px;margin-bottom: 10px;" ></center>
+</div>
+</div>
+<br><br>
+
+
+
+
+
+
+
+
+
+
+<h3 style="margin-left: 5px; "><b>5) Break</b></h3><br>
+<div style="margin-top: 15px; margin-left: 40px; margin-right: 15px;">
+
+  <h4 style="margin-left: 7px;">Definition:</h4>
+  <p style="margin-left: 20px;"> This will stop the execution of more execution of code and/or case testing inside the block.<br>When the break statement is used with a switch statement, it breaks out of the switch block. <br>When the break statement is used in a loop, it breaks the loop and continues executing the code after the loop (if any). </p>
+
+<h4 style="margin-left: 7px;">Syntax:</h4>
+  <textarea style="height: 80px;background: grey; border-left:black SOLID 10px;">
+   <script type="text/javascript" language="javascript">
+      break;
+   </script> 
+  </textarea>
+<br><br>
+
+<div style="background: black; color: white; padding: 40px; padding-top: 25px; padding-bottom: 0px;height: 580px;">
+<table width="100%" border="0" cellpadding="5">
+      <tr>
+        <td width="50%"  scope="col">&nbsp;</td>
+        <td width="50%" scope="col" align="left">
+      
+        </td>
+      </tr>
+      <h4> Program using for Break</h4>
+      <td>
+        <form>
+          <strong style="color: #fff; ">Code</strong>
+          <textarea name="sourceCode" id="sourceCode125" style="background-color:powderblue;">
+            <!DOCTYPE html>
+            <html>
+            <head>
+              <title>Hello</title>
+            </head>
+            <body >
+              <script type="text/javascript" language="javascript">
+                  var i;
+                  for (i = 0; i < 5; i++) {
+                  if (i === 3) {
+                   break;
+                   }
+                   document.write("The number is " + i + "<br>");
+                   }     
+              </script>   
+            </body>
+            </html>
+          </textarea>
+        </form>
+      </td>
+      <td><strong style="color: #fff">Output</strong>
+        <iframe name="targetCode" id="targetCode125" style="background-color: powderblue"></iframe></td>
+   </table>
+<script type="text/javascript" language="javascript">
+   function runcode() {
+    var content = document.getElementById('sourceCode125').value;
+    var iframe = document.getElementById('targetCode125');
+    iframe = (iframe.contentWindow)?iframe.contentWindow:(iframe.contentDocument)?iframe.contentDocument.document:
+      iframe.contentDocument;
+
+     iframe.document.open();
+     iframe.document.write(content);
+     iframe.document.close();
+     return false;
+   }
+   runcode();
+</script>
+  <center><input onclick="runcode();" type="button" value="Run code" style="background-color: #fff; color: #000; border-radius: 20px;padding: 10px;margin-top: 10px;margin-bottom: 10px;" ></center>
+</div>
+</div>
+<br><br>
+
+
+
+
+
+
+
+
+<h3 style="margin-left: 5px; "><b>6) Continue</b></h3><br>
+<div style="margin-top: 15px; margin-left: 40px; margin-right: 15px;">
+
+  <h4 style="margin-left: 7px;">Definition:</h4>
+  <p style="margin-left: 20px;">The continue statement is used inside loops. When a continue statement is encountered inside a loop, control jumps to the beginning of the loop for next iteration, skipping the execution of statements inside the body of loop for the current iteration.</p>
+
+<h4 style="margin-left: 7px;">Syntax:</h4>
+  <textarea style="height: 80px;background: grey; border-left:black SOLID 10px;">
+   <script type="text/javascript" language="javascript">
+      continue;
+   </script> 
+  </textarea>
+<br><br>
+
+<div style="background: black; color: white; padding: 40px; padding-top: 25px; padding-bottom: 0px;height: 580px;">
+<table width="100%" border="0" cellpadding="5">
+      <tr>
+        <td width="50%"  scope="col">&nbsp;</td>
+        <td width="50%" scope="col" align="left">
+      
+        </td>
+      </tr>
+      <h4> Program using for Continue</h4>
+      <td>
+        <form>
+          <strong style="color: #fff; ">Code</strong>
+          <textarea name="sourceCode" id="sourceCode126" style="background-color:powderblue;">
+            <!DOCTYPE html>
+            <html>
+            <head>
+              <title>Hello</title>
+            </head>
+            <body >
+              <script type="text/javascript" language="javascript">
+                    var i;
+                    for (i = 0; i < 5; i++) {
+                       if (i === 3) {
+                       continue;
+                       }
+                     document.write("The number is " + i + "<br>");
+                    }
+              </script>   
+            </body>
+            </html>
+          </textarea>
+        </form>
+      </td>
+      <td><strong style="color: #fff">Output</strong>
+        <iframe name="targetCode" id="targetCode126" style="background-color: powderblue"></iframe></td>
+   </table>
+<script type="text/javascript" language="javascript">
+   function runcode() {
+    var content = document.getElementById('sourceCode126').value;
+    var iframe = document.getElementById('targetCode126');
+    iframe = (iframe.contentWindow)?iframe.contentWindow:(iframe.contentDocument)?iframe.contentDocument.document:
+      iframe.contentDocument;
+
+     iframe.document.open();
+     iframe.document.write(content);
+     iframe.document.close();
+     return false;
+   }
+   runcode();
+</script>
+  <center><input onclick="runcode();" type="button" value="Run code" style="background-color: #fff; color: #000; border-radius: 20px;padding: 10px;margin-top: 10px;margin-bottom: 10px;" ></center>
+</div>
+</div>
+<br><br>
+
+
+
+
+</body>
+</html>
