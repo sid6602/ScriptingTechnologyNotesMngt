@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>W3 Schools</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous"></head>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+ <style type="text/css">
+
+	*{
+		font-style: normal;
+		font-family: Arial, Helvetica, sans-serif;
+	}
+ 	.tal:hover{ 
+           color: red;
+ 	}
+ 	textarea ,iframe{
+ 		border:2px solid #ddd;
+ 		height: 500px;
+ 		width: 100%; 
+ 	}
+  body{
+ font-family: arial;
+ background-color: #000000;
+ color: #fff;
+ margin:0;
+ padding: 0;
+ perspective: 1px;
+ transform-style: preserve-3d;
+ height: 100%;
+ overflow-y: scroll;
+ overflow-x: hidden;
+ font-family: "Luna";
+}
+
+ </style>
+
+</head>
+<body style="margin: 70px;">
+
+  
+  <div class="header" style="padding-left: 20px;padding-top: 10px; ">
+  <h1 style="color: black;text-align: center;"><span style="color: White;">Program editor</span></h1>
+</div>
+    
+
+   <table width="100%" border="0" cellpadding="5">
+      <tr>
+        <td width="50%"  scope="col">&nbsp;</td>
+        <td width="50%" scope="col" align="left">
+      
+        </td>
+      </tr>
+   	  <td>
+   	  	<form>
+   	  		<strong style="font-size: 25px; color: #fff ">Code</strong>
+   	  		<textarea name="sourceCode" id="sourceCode" style="background-color:powderblue; border-radius: 15px; height: 350px; border-color:#32909a ;">
+   	  			<!DOCTYPE html>
+   	  			<html>
+   	  			<head>
+   	  				<title>Hello</title>
+   	  			</head>
+   	  			<body >
+   	  			        <h1>hello</h1>
+   	  			        <p>Write Html, Javascript code and run code</p>
+   	  			</body>
+   	  			</html>
+   	  		</textarea>
+   	  	</form>
+   	  </td>
+   	  <td><strong style="font-size: 25px; color: #fff">Output</strong>
+        <iframe name="targetCode" id="targetCode" style="background-color: powderblue;border-radius: 15px;height: 350px;border-color:#32909a ;"></iframe></td>
+   </table>
+<script type="text/javascript" language="javascript">
+	 function runcode1() {
+	 	var content = document.getElementById('sourceCode').value;
+	 	var iframe = document.getElementById('targetCode');
+	 	iframe = (iframe.contentWindow)?iframe.contentWindow:(iframe.contentDocument)?iframe.contentDocument.document:
+	 	  iframe.contentDocument;
+
+	 	 iframe.document.open();
+	 	 iframe.document.write(content);
+	 	 iframe.document.close();
+	 	 return false;
+	 }
+	 runcode1();
+</script>
+  <center><button onclick="runcode1();"   class="btn btn-success" >Run Code</button></center>
+
+</script>
+
+
+
+
+
+</body>
+</html>

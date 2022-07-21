@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> SPT Notes</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous"></head>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+
+html{
+	height: 100%;
+	overflow: hidden;
+}
+*{
+	margin: 0px;
+ 	padding: 0px;
+	font-style: normal;
+	font-family: Arial, Helvetica, sans-serif;
+}
+#readmore {display: none;}
+
+body{
+	
+ font-family: arial;
+ background-color: lightgrey;
+ color: #fff;
+ margin:0;
+ padding: 0;
+ perspective: 1px;
+ transform-style: preserve-3d;
+ height: 100%;
+ overflow-y: scroll;
+ overflow-x: hidden;
+ font-family: "Luna";
+
+
+}
+input[type="checkbox"]
+{
+	position: fixed;
+	right: 20px;
+	top: 20px;
+	width: 50px;
+	height: 50px;
+	z-index: 100000;
+	cursor: pointer;
+}
+.icon{
+	position: fixed;
+	right: 20px;
+	top: 20px;
+	width: 50px;
+	height: 50px;
+	z-index: 100001;
+	background: #000;
+	pointer-events: none;
+}
+.icon:before{
+	content: "close";
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	color: #fff;
+	text-align: center;
+	line-height: 50px;
+	text-transform: uppercase;
+	font-weight: 700;
+}
+input[type="checkbox"]:checked ~ .icon:before{
+	content: "menu";
+}
+.ul{
+	position: fixed;
+	top: 0;
+	left: 0;
+	margin: 0;
+	padding: 50px 20px;
+	box-sizing: border-box;
+	width: 250px;
+	height: 100vh;
+	background: #000;
+	transition: 0.5s;
+	z-index: 100000;
+	overflow-y: auto;
+}
+.ul li{
+	list-style: none;
+
+}
+.ul li a{
+	display: block;
+	color: #fff;
+	padding: 10px;
+	box-sizing: border-box;
+	text-decoration: none;
+	font-size: 24px;
+	font-weight: 700;
+	transition: 0.5s;
+}
+.ul li a:hover
+{
+	transform:translateX(10px);
+	color: #ff0;
+}
+input[type="checkbox"]:checked ~ .ul{
+	left: -300px;
+
+}
+header{
+	box-sizing: border-box;
+	min-height: 100vh;
+	padding: 30vw 0 5vw;
+	position: relative;
+	transform-style: inherit;
+	width: 100vw;
+
+}
+header h1{
+	margin-top: -100px;
+}
+header .header:before{
+	background: 50% 50% /cover;
+
+}
+header::before{
+	bottom: 0;
+	content: "";
+	left: 0;
+	position: absolute;
+	right: 0;
+	top: 0;
+	display: block;
+
+	background-size: cover;
+	transform-origin: center center 0;
+	transform: translateZ(-1px) scale(2);
+	z-index: -1;
+	min-height: 100vh;
+
+}
+
+header *{
+	font-weight: normal;
+	letter-spacing: 0.2em;
+	text-align: center;
+	margin: 0;
+	padding: 1em 0;
+
+}
+.setmargin{
+
+ margin: 2%;
+}
+
+.card{
+     width: 18%;
+     display: inline-block;
+     box-shadow: 2px 2px 20px orange;
+     border-radius: 5px; 
+     margin: 3%;
+
+    }
+    .imageSize img{
+  width: 100%;
+  border-top-right-radius: 5px;
+  border-top-left-radius: 5px;
+ }
+
+ .heading{
+  text-align: center;
+  padding: 4px;
+  color: black;
+  }
+
+h1{
+  font-size: 20px;
+ }
+
+ .destination{
+  padding: 00px;
+  text-align: center;
+ 
+  padding-top: 00px;
+  border-bottom-right-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+button{
+  margin-top: 5px;
+  margin-bottom: 5px;
+  background-color: white;
+  border: 1px solid white;
+  border-radius: 5px;
+  padding-top:5px;
+  padding-left: 68px;
+  padding-right: 68px;
+}
+button:hover{
+  background-color: black;
+  color: white;
+  transition: 0.5s;
+  cursor: pointer;
+}
+.footer{
+  	background-color:  black;
+  	color: #d3d3d3;
+  	height: 400px;
+  	position: relative;
+  }
+  .footer .footer-content{
+  	border:none;
+  	height: 350px;
+  	display: flex;
+  }
+  .footer .footer-content .footer-section{
+  	flex: 1;
+  	padding: 25px;
+  
+  }
+
+  .footer .footer-content .contact-form .contact-input{
+     background: #272727;
+     color: #beddbd;
+     margin-bottom: 10px;
+     line-height: 1.5rem;
+     padding: .7rem 1.2rem;
+
+  }
+  .footer .footer-button{
+  	background-color: black;
+  	color: #686868;
+  	height: 50px;
+  	width: 100%;
+  	text-align: center;
+  	position: absolute;
+  	bottom: 0px;
+  	left: 0px;
+  	padding-top: 20px;
+  }
+
+
+
+
+body, html {
+  height: 100%;
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/*.hero-image*/
+.abcd{
+  background-image: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.7)),url(s1.jpg);;
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+.hero-text {
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+}
+
+.hero-text button {
+  border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 10px 25px;
+  color: black;
+  background-color: #ddd;
+  text-align: center;
+  cursor: pointer;
+box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+.hero-text button:hover {
+  background-color: #555;
+  color: white;
+
+}
+
+
+</style>
+</head>
+<body class="abcd">
+	<input type="checkbox" name="">
+	<span class="icon"></span>
+	<ul class="ul">
+		<li><a href="#Home">Home</a></li>
+    <li><a href="#Syllabus">Syllabus</a></li>
+		<li><a href="1_online_editor.html">Online Editor</a></li>
+    <li><a href="1_videogallery.html">Video Gallery</a></li>
+    <li><a href="#contactus">Contact Us</a></li>
+	</ul>
+
+	<div class="hero-image">
+  <div class="hero-text">
+    <h1 style="font-size:80px; text-shadow: 3px 2px orange;"><b>Scripting <br>Technology</b></h1>
+    
+  </div>
+</div>
+
+  <!-- <header>
+   	<h1 style="font-size: 50px; " ><b>Scripting Technology</b></h1>
+   	<form>
+   		<button style="border-radius: 40px; box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);"><a href="W3schools.html">Online Compiler</button>
+   	</form>
+   </header>
+  <table border="0" width="100%" bgcolor="grey">
+   <tr>	
+  	<td style="padding-left: 40px;"><h3>Scripting Technology</h3></td>
+  <td style="padding-left: 10px;">
+  	<div style="font-size: 20px;">
+  	  	    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<button class="btn btn-primary" style="box-shadow: 2px 2px 20px orange;">Home</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+   			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<button class="btn btn-primary" style="box-shadow: 2px 2px 20px orange;">Syllabus</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+   			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<button class="btn btn-primary" style="box-shadow: 2px 2px 20px orange;">Contact us</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+   			&nbsp;&nbsp;&nbsp;<button class="btn btn-primary" href="D:\khushal\W3schools.html" style="box-shadow: 2px 2px 20px orange;">Online Editor</button>
+ </div>
+  </td> 
+  
+</table><br><br><br><br>  
+--->
+<center>
+<div class="setmargin">
+
+
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<div class="card">
+<a href="frames/frame_1.html">
+<div class="imageSize">
+   <img src="img/u1.jpg">
+</div>
+
+<div class="destination">
+ <!--<p style="font-size: 15px; color: red;">Introduction to Javascript</p>-->
+<button>Read More</a></button>
+</div>
+</div>
+
+
+<div class="card">
+<a href="frames/frame_2.html">
+<div class="imageSize">
+   <img src="img/u2.jpg">
+</div>
+<div class="destination">
+<button>Read More</a></button>
+</div>
+</div>
+
+
+<div class="card">
+<a href="frames/frame_3.html">
+<div class="imageSize">
+   <img src="img/u3.jpg">
+</div>
+
+<div class="destination">
+<button>Read More</a></button>
+</div>
+</div>
+
+
+<div class="card">
+<a href="frames/frame_4.html">
+<div class="imageSize">
+   <img src="img/u4.jpg">
+</div>
+
+<div class="destination">
+ 
+<button>Read More</a></button>
+</div>
+</div>
+
+
+<div class="card">
+<a href="frames/frame_5.html">
+<div class="imageSize">
+   <img src="img/u5.jpg">
+</div>
+
+<div class="destination">
+<button>Read More</a></button>
+</div>
+</div>
+
+
+<div class="card">
+<a href="frames/frame_6.html">
+<div class="imageSize">
+   <img src="img/u6.jpg">
+</div>
+
+<div class="destination">
+<button>Read More</a></button>
+</div>
+</div>
+
+<div class="card">
+<a href="frames/frame_7.html">
+<div class="imageSize">
+   <img src="img/u7.jpg">
+</div>
+<!--<div class="heading">
+ <h1>Chapter 7</h1>
+</div>-->
+<div class="destination">
+<button>Read More</a></button>
+
+</center>
+</div>
+</div>
+
+
+<script type="text/javascript" language="javascript">
+   function read() {
+   	document.write("<ul>"+"<li>"+"")
+   }
+
+</script>
+<br><br><br><br><br><br><br><br><br><br><br><br>
+<div class="footer">
+	<div class="footer-content">
+          
+		<div class="footer-section about" style="font-size: 15px;">
+         <h2>Scripting &nbsp;&nbsp;<name style="color: skyblue;">Technology</name></h2><br>
+
+         <p style="font-family: vardana; font-size: 17px;">Scripting Tchnology is specially made for education purposes , to learning javascript. It is specially for first year student.  </p>
+
+          <i class="fas fa-phone"></i>&nbsp;&nbsp;<name>93256-75998</name><br><br>
+          <i class="fas fa-envelope">&nbsp;&nbsp;<name style="font-size: 20px;">info@mywesite.com</name></i><br><br>
+         <i class="fab fa-google-plus-g"></i>&nbsp;&nbsp;
+        	 <i class="fab fa-facebook"></i>&nbsp;&nbsp;
+         <i class="fab fa-instagram"></i>&nbsp;&nbsp;
+        
+
+
+		</div>
+
+			<div class="footer-section links">
+			
+			<h2 style="color: white;">DEVELOPER TEAM</h2>
+			<ul style="color: grey; transition: 3s;" class="ss" >
+				<li>Siddhi Mankar</li>
+				<li>Janhavi Sonawane</li>
+				<li>Dnyanesh Bachhav</li>
+				<li>Tejas Patil</li>
+			</ul>
+		
+			</div>
+				<div class="footer-section contact-form" id="contactus">
+					<h2>Contact Us</h2><br>
+                   &nbsp; &nbsp;<input type="email" name="email" placeholder="Your Email Address..." style="background:#272727; color: #beddbd; margin-bottom: 10px; line-height: 1.5rem; padding: .9rem 1.4rem; border:none; border-radius: 50px;"><br>
+                   &nbsp;&nbsp;<textarea name="message" class="text-input contact-input" placeholder="Your Message..." style="background:#272727; color: #beddbd; margin-bottom: 10px; line-height: 1.5rem; padding: .9rem 1.4rem; border: none; border-radius: 50px;"></textarea><br>
+                   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<button type="submit" class="btn btn-primary">
+                   &nbsp;<i class="fas fa-envelope"></i>
+                   Send
+                   </button>
+				</div>
+			
+		
+		
+	</div>
+	<div class="footer-button" style="color: white;">
+	  &copy; siddhim6602@gmail.com
+		<!--&copy;  tppatil910@gmail.com-->
+	</div>
+</div>
+<script type="text/javascript"language="javascript">
+	var element;
+	 document.querySelector("footer").className="abc";
+	console.log(element);
+</script>
+</body>
+</html>
